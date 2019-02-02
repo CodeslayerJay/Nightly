@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nightly - Simple End of Day Journal</title>
+    <link rel='stylesheet' href='/stylesheets/custom_bs_01.css' />
+    <link rel='stylesheet' href='/stylesheets/custom.css' />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h3 class="title">Nightly <small>- Simple End of Day Journal</small></h3>
+      <!-- MENU -->
+      <ul class="nav justify-content-end fixed-top">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/new">New Entry</a>
+        </li>
+      </ul>
+      <!-- // END MENU -->
+      
+      <!-- LIST ENTRIES -->
+      <div class="row">
+        <div class="list-group">
+          {{#data}}
+          <a href="/view/{{ id }}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1 entry-title">{{ toughts_entry }}</h5>
+              <small>{{ entry_date }}</small>
+            </div>
+            <p class="mb-1">Good stuff: {{ good_deeds_entry }}</p>
+            <small>Focus/Change: {{ adjust_focus_entry }}</small>
+          </a>
+        {{/data}}
+        </div>
+      </div>
+      <!-- // END ENTRIES -->
+    </div>
+  </body>
+</html>

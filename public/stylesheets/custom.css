@@ -1,0 +1,42 @@
+/*
+  Site Custom Styles
+*/
+
+
+body {
+  padding: 50px;
+  
+}
+
+input {
+  padding: 8px;
+}
+
+.row {
+  padding: 10px;
+}
+
+input.btn {
+  padding: 9px 20px;
+  margin-top: -5px;
+}
+
+select {
+  padding: 10px 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.title em {
+  font-size: .2em!important;
+}
+
+.entry-title {
+  text-overflow: ellipsis;
+}
+
+label {
+  color: #777!important;
+}

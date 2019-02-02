@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nightly</title>
+    <link rel='stylesheet' href='/stylesheets/custom_bs_01.css' />
+    <link rel='stylesheet' href='/stylesheets/custom.css' />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h5>New Entry <small>({{ date }})</small></h5>
+      <!-- MENU -->
+      <ul class="nav justify-content-end fixed-top">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+      </ul>
+      <!-- // END MENU -->
+      
+      <!-- FORM CONTAINER -->
+      <div class="row">
+        <form method="POST" action="/new">
+            <div class="form-group mb-4">
+                <label for="toughtsEntry">What are your thoughts about today?</label>
+                <textarea required class="form-control" id="toughtsEntry" rows="5" name="toughts_entry" placeholder="Today I..."></textarea>
+            </div>
+            <div class="form-group mb-4">
+                <label for="goodDeed">What is one or more good thing(s) that happened today?</label>
+                <input required type="text" name="good_deeds_entry" class="form-control" id="goodDeed" placeholder="I accomplished two tasks for one of my goals, etc...">
+            </div>
+            <div class="form-group mb-5">
+                <label for="adjustFocus">Did anything happen today that you would do differently next time?</label>
+                <input required type="text" name="adjust_focus_entry" class="form-control" id="adjustFocus" placeholder="Say hello to the cute girl that was smiling at me, etc...">
+            </div>
+            <h5>Accountability:</h5>
+            <div class="form-group mb-5">
+                <label for="complete_todo">Did you complete your todo list?</label>
+                <select name="complete_todo" id="complete_todo">
+                  <option value="false" selected>No</option>
+                  <option value="true">Yes</option>
+                </select>
+            </div>
+            <div class="form-group mb-5">
+                <label for="complete_exercise">Did you exercise?</label>
+                <select name="complete_exercise" id="complete_exercise">
+                  <option value="false" selected>No</option>
+                  <option value="true">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <a href="/" class="btn btn-outline">Cancel</a>
+                <input type="submit" value="Save" class="btn btn-outline-primary"/>
+            </div>
+        </form>
+      </div>
+      <!-- // END FORM -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nightly</title>
+    <link rel='stylesheet' href='/stylesheets/custom_bs_01.css' />
+    <link rel='stylesheet' href='/stylesheets/custom.css' />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h5>Edit Entry <small>({{ entry_date }})</small></h5>
+      <!-- MENU -->
+      <ul class="nav justify-content-end fixed-top">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li>
+          <a class="nav-link" href="/view/{{ _id }}">Go Back</a>
+        </li>
+      </ul>
+      <!-- // END MENU -->
+      
+      <!-- FORM CONTAINER -->
+      <div class="row">
+        <form method="POST" action="/edit">
+            <div class="form-group mb-4">
+                <label for="toughtsEntry">What are your thoughts about today?</label>
+                <textarea required class="form-control" id="toughtsEntry" rows="5" name="toughts_entry">
+                  {{ toughts_entry }}
+                </textarea>
+            </div>
+            <div class="form-group mb-4">
+                <label for="goodDeed">What one good thing happened today?</label>
+                <input required type="text" name="good_deeds_entry" value="{{good_deeds_entry}}" class="form-control" id="goodDeed" placeholder="I accomplished two tasks for one of my goals, etc...">
+            </div>
+            <div class="form-group mb-5">
+                <label for="adjustFocus">Did anything happen today that you would do differently next time?</label>
+                <input required type="text" name="adjust_focus_entry" value="{{adjust_focus_entry}}" class="form-control" id="adjustFocus" placeholder="Say hello to the cute girl that was smiling at me, etc..."/>
+            </div>
+            <h5>Accountability:</h5>
+            <ul style="list-style: none;" class="mb-5">
+              <li>Completed Todo: {{ complete_todo }}</li>
+              <li>Completed Exercise: {{ complete_exercise }}</li>
+            </ul>
+            <div class="form-group">
+                <input type="hidden" name="entry_id" value="{{ _id }}" />
+                <a href="/view/{{ _id }}" class="btn btn-outline">Cancel</a>
+                <input type="submit" value="Save" class="btn btn-outline-primary"/>
+            </div>
+        </form>
+      </div>
+      <!-- // END FORM -->
+    </div>
+  </body>
+</html>
