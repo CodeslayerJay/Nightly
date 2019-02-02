@@ -28,8 +28,6 @@
               <h5 class="mb-1 entry-title">{{ toughts_entry }}</h5>
               <small>{{ entry_date }}</small>
             </div>
-            <p class="mb-1">Good stuff: {{ good_deeds_entry }}</p>
-            <small>Focus/Change: {{ adjust_focus_entry }}</small>
           </a>
         {{/data}}
         </div>

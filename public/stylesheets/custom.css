@@ -34,6 +34,10 @@ select {
 }
 
 .entry-title {
+  display:block;
+  width: 500px;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
